@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'blissstudio.wsgi.application'
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
 DATABASES = { 'default': dj_database_url.config( default=f'sqlite:///{BASE_DIR / "db.sqlite3"}', conn_max_age=600, ) } 
-print("DEBUG DATABASE_URL SEEN:", os.environ.get('DATABASE_URL'))
+
 
 # Password validation
 # https://docs.djangoproject.com/en/6.1/ref/settings/#auth-password-validators
