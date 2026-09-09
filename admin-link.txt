@@ -1,1 +1,7 @@
 https://bliss-studio-backend.onrender.com/admin
+
+run python manage.py runserver then http://127.0.0.1:8000/admin/
+
+python manage.py makemigrations
+
+python manage.py migrate
