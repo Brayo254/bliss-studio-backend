@@ -4,6 +4,7 @@ class Service(models.Model):
     name = models.CharField(max_length=90)
     price= models.DecimalField(max_digits=6,decimal_places=2)
     duration_minutes = models.IntegerField()
+    description=models.TextField(blank=True,null=True)
     
     def __str__(self):
         return f"{self.name} - {self.price} - {self.duration_minutes}"
