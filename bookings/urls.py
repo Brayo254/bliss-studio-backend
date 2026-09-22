@@ -1,8 +1,9 @@
 from django.urls import path,include
-from .views import ServiceListView,StaffListView,TimeSlotListView
+from .views import ServiceListView,StaffListView,TimeSlotListView,BookingCreateView
 
 urlpatterns=[
     path('services/',ServiceListView.as_view(),name='service-list'),
     path('staff/',StaffListView.as_view(),name='staff-list'),
-    path('timeslots/',TimeSlotListView.as_view(),name='time-slot')
+    path('timeslots/',TimeSlotListView.as_view(),name='time-slot'),
+    path('bookings/',BookingCreateView.as_view(),name='booking')
 ]
