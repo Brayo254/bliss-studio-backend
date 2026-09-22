@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import generics,permissions
 from .models import Service
 from .models import TimeSlot
 from .models import Staff
@@ -8,6 +8,7 @@ from .serializers import ServiceSerializer
 from .serializers import StaffSerializer
 from .serializers import TimeSlotSerializer
 from .serializers import BookingSerializer
+
 
 # Create your views here.
 class ServiceListView(generics.ListAPIView):
@@ -29,3 +30,7 @@ class BookingCreateView(generics.CreateAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
 
+class BookingListView(generics.ListAPIView):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
+    permission_classes = [permissions.IsAuthenticated]
